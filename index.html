@@ -27,7 +27,7 @@
       referrerpolicy="no-referrer"
     />
     <style>
-      body {
+       body {
         font-family: "Segoe UI", sans-serif;
         background-color: #f5f9ff;
         color: #0a2540;
@@ -151,6 +151,171 @@
     right: 20px; /* Slide into view */
     background-color: #01184c;
   }
+
+  /* slider */
+
+  
+    .carousel-container {
+      max-width: 1280px;
+      margin: auto;
+      overflow: hidden;
+      position: relative;
+    }
+
+    .slider-track {
+      display: flex;
+      transition: transform 0.6s ease-in-out;
+    }
+
+    .card {
+      flex: 0 0 33.3333%;
+      background-color: #fff;
+      border-radius: 12px;
+      margin: 0 10px;
+      box-shadow: 0 6px 16px rgba(0, 0, 0, 0.08);
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .card img {
+      width: 100%;
+      height: 200px;
+      object-fit: cover;
+    }
+
+    .card-content {
+      padding: 16px;
+    }
+
+    .card-content small {
+      color: #666;
+      display: block;
+      margin-bottom: 8px;
+      font-weight: 500;
+    }
+
+    .card-content h3 {
+      font-size: 1.1rem;
+      margin-bottom: 10px;
+      color: #222;
+    }
+
+    .card-content p {
+      font-size: 0.95rem;
+      color: #444;
+      line-height: 1.5;
+    }
+
+    .pagination {
+      text-align: center;
+      margin-top: 20px;
+    }
+
+    .dot {
+      height: 12px;
+      width: 12px;
+      margin: 0 6px;
+      background-color: #ccc;
+      border-radius: 50%;
+      display: inline-block;
+      transition: background-color 0.3s ease;
+      cursor: pointer;
+    }
+
+    .dot.active {
+      background-color: #333;
+    }
+
+    @media (max-width: 768px) {
+      .card {
+        flex: 0 0 100%;
+        margin: 0;
+      }
+    }
+
+    /* contact=form */
+
+     .form-container {
+      background-color: #fff;
+      border-radius: 16px;
+      padding: 10px;
+      max-width: auto;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+      text-align: center;
+    }
+
+    .form-container h2 {
+      margin-top: 0;
+      color: #2d3748;
+      font-size: 24px;
+    }
+
+    .form-container p {
+      font-size: 14px;
+      color: #718096;
+      margin-bottom: 30px;
+    }
+
+    label {
+      display: block;
+      text-align: left;
+      font-size: 13px;
+      font-weight: 600;
+      color: #2d3748;
+      margin-bottom: 6px;
+      margin-top: 0px;
+    }
+
+    label span {
+      color: red;
+      margin-left: 2px;
+    }
+
+    input, select {
+      width: 80%;
+      padding: 6px 6px;
+      font-size: 12px;
+      border: 1px solid #e2e8f0;
+      border-radius: 8px;
+      background-color: #f9fafb;
+      color: #2d3748;
+      outline: none;
+      transition: border-color 0.3s;
+    }
+
+    input:focus, select:focus {
+      border-color: #3182ce;
+      background-color: #fff;
+    }
+
+    button {
+      margin-top: 20px;
+      width: 80%;
+      padding: 6px;
+      background: linear-gradient(to right, #1e3a72, #2a5298);
+      color: #fff;
+      font-weight: bold;
+      font-size: 16px;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: opacity 0.3s ease;
+    }
+
+    button:hover {
+      opacity: 0.9;
+    }
+
+    .disclaimer {
+      margin-top: 10px;
+      font-size: 12px;
+      color: #4a5568;
+    }
+
+    .disclaimer strong {
+      font-weight: 600;
+    }
     </style>
   </head>
   <body>
@@ -725,6 +890,111 @@
           <a href="#signs">Warning Signs</a>
           <a href="#aware">Final Tips</a>
         </div>
+                <!-- Contact Form -->
+         <h3>Contact Us</h3>
+          
+          
+              <div class="form-container">
+          
+          <form id="contactForm">
+            <label for="name">Full Name <span>*</span></label>
+            <input type="text" id="name" name="name" required>
+            
+            <label for="email">Email <span>*</span></label>
+            <input type="email" id="email" name="email" required>
+            
+            <label for="phone">Phone Number<span>*</span></label>
+            <input type="tel" id="phone" name="phone" required>
+            
+            <label for="concern">Your Concern <span>*</span></label>
+            <select id="concern" name="concern" required>
+              <option value="" disabled selected>Select an option</option>
+              <option value="anxiety">Anxiety Issues</option>
+              <option value="depression">Depression</option>
+              <option value="covid-stress">COVID-related Stress</option>
+              <option value="other">Other Mental Health Concern</option>
+            </select>
+            
+            <button type="submit">Submit</button>
+          </form>
+          
+          <div class="disclaimer">
+            <strong>Note:</strong> We respect your privacy. Your information will not be shared.
+          </div>
+        </div>
+   
+      </div>
+
+      
+    </div>
+    <!-- slider -->
+    
+          <div class="carousel-container">
+    <div class="slider-track" id="blogTrack">
+      <!-- Card 1 -->
+      <div class="card">
+        <img src="https://raw.githubusercontent.com/Aniruddhaoffice/practo_copy/refs/heads/master/blog_683ae07d16fb41.17062439.webp" alt="Blog 1" />
+        <div class="card-content">
+          <small>Post : may 31st 2025</small>
+          <h3>Understanding the Difference Between Bipolar and Borderline Personality Disorder: A Comprehensive Guide</h3>
+          <p>The NEET PG Syllabus acts as one of the foundation stones for aspiring postgraduate medical students like you…</p>
+        </div>
+      </div>
+
+      <!-- Card 2 -->
+      <div class="card">
+        <img src="https://raw.githubusercontent.com/Aniruddhaoffice/practo_copy/refs/heads/master/blog_683ae4e1e325c6.23484201.webp" alt="Blog 2" />
+        <div class="card-content">
+          <small>Post : may 30th 2025</small>
+          <h3>बॉर्डरलाइन पर्सनालिटी डिसऑर्डर क्या है? जानिए इसके लक्षण, कारण और इलाज – Borderline Personality Disorder in Hindi</h3>
+          <p>बॉर्डरलाइन पर्सनालिटी डिसऑर्डर (BPD) एक मानसिक विकार है, जो व्यक्ति की भावनाओं, स्व-छवि और रिश्तों को प्रभावित करता…</p>
+        </div>
+      </div>
+
+      <!-- Card 3 -->
+      <div class="card">
+        <img src="https://raw.githubusercontent.com/Aniruddhaoffice/practo_copy/refs/heads/master/blog_683ae07d16fb41.17062439.webp" alt="Blog 3" />
+        <div class="card-content">
+          <small>Post : may 29th 2025</small>
+          <h3>नींद की गोली खाने से क्या होता है? जानिए इसके दुष्प्रभाव, जोखिम और सुरक्षित विकल्प</h3>
+          <p>नींद की गोली खाने से क्या होता है? यह एक सामान्य सवाल है जो आजकल बहुत से लोगों के दिमाग में है…</p>
+        </div>
+      </div>
+
+      <!-- Repeat cards for loop -->
+      <div class="card">
+        <img src="https://raw.githubusercontent.com/Aniruddhaoffice/practo_copy/refs/heads/master/blog_683ae07d16fb41.17062439.webp" alt="Blog 1" />
+        <div class="card-content">
+          <small>Post : may 31st 2025</small>
+          <h3>Understanding the Difference Between Bipolar and Borderline Personality Disorder: A Comprehensive Guide</h3>
+          <p>The NEET PG Syllabus acts as one of the foundation stones for aspiring postgraduate medical students like you…</p>
+        </div>
+      </div>
+
+      <div class="card">
+        <img src="https://raw.githubusercontent.com/Aniruddhaoffice/practo_copy/refs/heads/master/blog_683ae4e1e325c6.23484201.webp" alt="Blog 2" />
+        <div class="card-content">
+          <small>Post : may 30th 2025</small>
+          <h3>बॉर्डरलाइन पर्सनालिटी डिसऑर्डर क्या है? जानिए इसके लक्षण, कारण और इलाज – Borderline Personality Disorder in Hindi</h3>
+          <p>बॉर्डरलाइन पर्सनालिटी डिसऑर्डर (BPD) एक मानसिक विकार है, जो व्यक्ति की भावनाओं, स्व-छवि और रिश्तों को प्रभावित करता…</p>
+        </div>
+      </div>
+
+     <div class="card">
+        <img src="https://raw.githubusercontent.com/Aniruddhaoffice/practo_copy/refs/heads/master/blog_683ae07d16fb41.17062439.webp" alt="Blog 3" />
+        <div class="card-content">
+          <small>Post : may 29th 2025</small>
+          <h3>नींद की गोली खाने से क्या होता है? जानिए इसके दुष्प्रभाव, जोखिम और सुरक्षित विकल्प</h3>
+          <p>नींद की गोली खाने से क्या होता है? यह एक सामान्य सवाल है जो आजकल बहुत से लोगों के दिमाग में है…</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="pagination">
+    <span class="dot active" onclick="goToSlide(0)"></span>
+    <span class="dot" onclick="goToSlide(1)"></span>
+  </div>
       </div>
     </div>
 
@@ -735,6 +1005,34 @@
           faqItem.classList.toggle("open");
         });
       });
+
+      // bbolg
+
+      const blogTrack = document.getElementById("blogTrack");
+    const dots = document.querySelectorAll(".dot");
+    const totalSlides = 2; // 6 cards / 3 per slide
+    let currentIndex = 0;
+
+    function showSlide(index) {
+      const percent = index * 100;
+      blogTrack.style.transform = `translateX(-${percent}%)`;
+      dots.forEach(dot => dot.classList.remove("active"));
+      dots[index].classList.add("active");
+      currentIndex = index;
+    }
+
+    function nextSlide() {
+      const next = (currentIndex + 1) % totalSlides;
+      showSlide(next);
+    }
+
+    function goToSlide(index) {
+      showSlide(index);
+      clearInterval(autoSlide);
+      autoSlide = setInterval(nextSlide, 5000);
+    }
+
+    let autoSlide = setInterval(nextSlide, 5000);
     </script>
   </body>
 </html>
